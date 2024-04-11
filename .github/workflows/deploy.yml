@@ -86,7 +86,7 @@ jobs:
             owner: context.repo.owner,
             repo: context.repo.repo,
             tag_name: 'v${{ inputs.version }}',
-            target_commitish: 'v${{ github.sha }}',
+            target_commitish: '${{ github.sha }}',
             previous_tag_name: '${{ steps.last-release.outputs.tag_name }}',
           })
           return data.body
